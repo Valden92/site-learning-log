@@ -1,0 +1,23 @@
+{% extends "learning_logs/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <h2>Темы</h2>
+{% endblock page_header %}
+
+{% block content %}
+
+  <ul>
+    {% for topic in topics %}
+      <li><h3>
+        <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+      </h3></li>
+    {% empty %}
+      <li><h4>Создай новую тему, чтобы местечко не пуствало.</h4></li>
+    {% endfor %}
+  </ul>
+  {% buttons %}
+    <h5><a name="submit" class="btn btn-primary" href="{% url 'learning_logs:new_topic' %}">НОВАЯ ТЕМА</a></h5>
+  {% endbuttons %}
+
+{% endblock content %}
