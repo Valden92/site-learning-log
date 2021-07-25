@@ -2,7 +2,7 @@
  
  Первый сайт на Python, написанный с помощью учебника Python Crash Course (Эрик Мэтиз).
 
-Для работы сайта требуются модули: Django и bootstrap4
+Для работы сайта требуются фреймворк Django и модули: bootstrap4, psycopg2, django-heroku, gunicorn.
 
 Сайт имеет минималистичное оформление.
 
